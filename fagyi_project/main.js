@@ -17,21 +17,29 @@ function buttonClick(e)
   }
   else if (textarea.length >= 10 && mail.includes('@'))
   {
-    document.getElementById('error').textContent = 'Legalá  bb 10 karakter szükséges az elküldéshez!';
+    document.getElementById('error').textContent = 'Legalább 10 karakter szükséges az elküldéshez!';
     console.log('siker :)');
     alert('Köszönjük az értékelést!')
   }
 }
 
-function frissit()
+function frissit(e)
 {
-  console.log('Frissíts');
+  let area = e.currentTarget.value;
+  if(area.length < 50)
+  {
+    document.getElementById('form').style.backgroundColor = '#ff0000';
+  }
+  else if(area.length >= 50)
+  {
+    document.getElementById('form').style.backgroundColor = '#008000';
+  }
 }
 
 function init()
 {
   document.getElementById('submit').addEventListener('click', buttonClick);
-  document.getElementById('form').addEventListener('frissit', frissit)
+  document.getElementById('textarea').addEventListener('input', frissit)
 }
 
 document.addEventListener('DOMContentLoaded', init);
