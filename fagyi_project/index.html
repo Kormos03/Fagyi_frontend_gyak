@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <title>Fagylalt</title>
   </head>
-  <body class="text-black">
+  <body class="text-black container-lg">
     <style>
       body {
         background-image: url('background.jfif');
@@ -72,14 +72,15 @@
   </div>
 </table> 
 </section>
-<form>
+<form id="form">
 <h2>Értékelés</h2>
 email: <input type="email" id="email"><br>
 <label for="textarea">Vélemény</label>
 <textarea id="textarea">
 
 </textarea><br>
-<input type="submit" id="submitbtn">
+<input type="submit" id="submit" value="Új értékelés">
+<p id="error"></p>
 </form>
     <div id="app"></div>
     <script type="module" src="/main.js"></script>
